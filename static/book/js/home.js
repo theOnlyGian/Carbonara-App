@@ -14,7 +14,7 @@ let ricercaTitolo = document.querySelector('#ricerca-titolo')
 submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     let food = inputArea.value;
-    if (!checkSearch(food)){
+    if (!checkSearch(food)) {
         return;
     }
     cleanSearch();
@@ -65,7 +65,7 @@ function checkSearch(food) {
         ricercato.textContent = "Risultati per \"" + food + "\"";
         return true;
     }
-    
+
 }
 
 function cleanSearch() {
@@ -167,20 +167,14 @@ function cycleSublist(recipe, title) {
         <li>${list.MG.label} ${list.MG.quantity.toFixed(1)}g</li>
         `
     }
+    
     if (title === "Ingredienti") {
-        if (list.length > 6) {
-            length = 6;
-            for (let i = 0; i < length; i++) {
-                html += `<li>${list[i]}</li>`
-            }
-        }
-        if (list.length < 6) {
-            length = list.length;
-            for (let i = 0; i < length; i++) {
-                html += `<li>${list[i]}</li>`
-            }
+        length = list.length;
+        for (let i = 0; i < length; i++) {
+            html += `<li>${list[i]}</li>`
         }
     }
+
     html += '</ul></div>'
     return html;
 }
