@@ -34,7 +34,6 @@ async function fetchData(url) {
         const response = await fetch(url);
         const data = await response.json();
         const hits = await data.hits;
-        console.log(data)
         await hits.forEach((foodItem) => {
             generateHtml(foodItem);
         })
@@ -96,7 +95,7 @@ function generateHtml(foodItem) {
             <h5 class='cuisineType'>${foodItem.recipe.cuisineType[0].toUpperCase()}</h5>
             <h5 class='dishType'>${foodItem.recipe.dishType[0].toUpperCase()}</h5>
         </div>
-        <p><strong>${foodItem.recipe.mealType[0].toUpperCase()}</strong></p>
+        <p class='mealType'><strong>${foodItem.recipe.mealType[0].toUpperCase()}</strong></p>
         <p>
             ${foodItem.recipe.totalTime !== 0 ? '<i class="fa fa-clock-o" aria-hidden="true"></i> ' + foodItem.recipe.totalTime + ' minuti' : '<br>'}
         </p>
@@ -236,7 +235,6 @@ function loadBtns() {
 
         //Save the content into the database
         if (e.target.classList.contains('like')) {
-            console.log('clicked')
             let likeButton = e.target;
             let mainButtons = likeButton.parentElement;
             let risultato = mainButtons.parentElement;
@@ -250,7 +248,6 @@ function loadBtns() {
             let title = popup.children[0].textContent; //Data
 
             const csrftoken = getCookie('csrftoken');
-            console.log(csrftoken);
             const url = document.getElementById('home-url').dataset.url;
 
             //Send data to the database

@@ -8,7 +8,6 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
 }
 
 body {
@@ -956,8 +955,18 @@ section .close-button {
   }
 
   section .risultato {
-    width: 18rem;
+    width: 15rem;
+    height: auto;
     gap: 0.2rem;
+  }
+  section .risultato h5.cuisineType, section .risultato h5.dishType {
+    font-size: 0.8rem;
+  }
+  section .risultato h3 {
+    font-size: 1.1rem;
+  }
+  section .risultato .mealType {
+    font-size: 0.9rem;
   }
   section .risultato .popup {
     top: 50%;
@@ -968,6 +977,9 @@ section .close-button {
   }
   section .risultato .main-buttons .like {
     height: 2.5rem;
+  }
+  section .risultato img {
+    height: 14rem;
   }
 
   .favourite {
@@ -1085,7 +1097,6 @@ section .close-button {
   }
   main h1 {
     padding: 1rem;
-    margin-top: 7rem;
     font-size: 1.1rem;
     text-align: center;
   }
