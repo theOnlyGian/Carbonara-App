@@ -14,7 +14,7 @@ Make sure to have Python and Django  installed in you computer. Head over to htt
 Once you have downloaded Python and Django, run the following commands inside your git enabled terminal.
 ### 1. Clone this repository
 ```
-$ git clone https://github.com/Snowmaru0283/MyToDoList-Web-App.git
+$ git clone [https://github.com/Snowmaru0283/MyToDoList-Web-App.git](https://github.com/theOnlyGian/Carbonara-App.git)
 ```
 ### 2. Make the migrations
 Go to the project's directory and execute the following commands.
