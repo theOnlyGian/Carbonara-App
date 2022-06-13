@@ -1086,7 +1086,7 @@ section .close-button {
     height: 0;
   }
   section .fa-times:before {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.4rem;
   }
 
