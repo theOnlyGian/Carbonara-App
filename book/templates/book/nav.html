@@ -1,0 +1,14 @@
+<header>
+    <h1>Carbonara.</h1>
+    <ul class="nav active">
+        <li><a href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="{% url 'plates' %}"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/theOnlyGian" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        {% if loggedIn == False %}
+        <li><a href="{% url 'login' %}"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        {% endif %}
+        {% if loggedIn == True %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+    </ul>
+</header>

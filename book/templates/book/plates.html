@@ -1,0 +1,19 @@
+{% extends 'book/layout.html' %}
+{% load static %}
+{% block body %}
+{% include 'book/nav.html' %}
+<div class="favourites">
+    <h1 id="ricerca-titolo"></h1>
+    <div class="risultati-wrapper">
+    </div>
+</div>
+<button class="scroll-to-top hide">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<div class="overlay hidden"></div>
+<input type="hidden" id="plates-url" data-url="{% url 'plates' %}" />
+<script src="{% static 'js/plates.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
+
+{% endblock %}

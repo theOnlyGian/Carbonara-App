@@ -1,0 +1,132 @@
+@import 'variables';
+
+.access-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/bg1.jpg');
+    background-size: cover;
+}
+
+.access-container .access-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(42, 11, 59, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    color: #fff;
+    width: 25rem;
+}
+
+.access-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+.access-container .username-input,
+.access-container .password-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.access-container .informations {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.access-container input[type=password],
+.access-container input[type=text] {
+    padding: .3rem;
+    padding-top: .9rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0%;
+    transition: all .1s;
+    border: solid 2px #fff;
+    outline: none;
+    color: #fff;
+}
+
+.access-container button {
+    width: 100%;
+    padding: .5rem;
+    align-self: flex-start;
+    border-radius: .3rem;
+    border: none;
+    background-color: #f89f5b;
+    color: #fff;
+    transition: all .3s;
+}
+
+.access-container button:hover {
+    cursor: pointer;
+    background-color: #ff8528;
+}
+
+.access-container label {
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    color: rgba(255, 255, 255, 0.84);
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.access-container input[type=password]:focus+label,
+.access-container input[type=password]:valid+label {
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.access-container input[type=text]:focus+label,
+.access-container input[type=text]:valid+label {
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.access-container input[type=text]:focus,
+.access-container input[type=password]:focus {
+    border: 2px solid #ff8528;
+}
+
+.access-container .access-form .informations {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.access-container .access-form .informations a {
+    color: #fff;
+}
+
+.access-container input[type=text]:focus~.fa-user:before {
+    color: #f89f5b;
+}
+
+.access-container input[type=password]:focus~.fa-lock:before {
+    color: #f89f5b;
+}

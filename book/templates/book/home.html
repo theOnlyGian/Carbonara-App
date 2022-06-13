@@ -1,0 +1,27 @@
+{% extends 'book/layout.html' %}
+{% load static %}
+{% block body%}
+{% include 'book/nav.html' %}
+<main>
+    <h1>All your favourite plates in one place. </h1>
+    <form action="">
+        <input id='input-food' type="text" placeholder="Try to search for pizza...">
+        <button id="submit-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+</main>
+<h1 id="ricerca-titolo">Trending</h1>
+<div class="risultati-wrapper">
+    <section class="risultati">
+    </section>
+</div>
+
+<button class="scroll-to-top hide">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<div class="overlay hidden"></div>
+<div class="status-message hide"></div>
+<input type="hidden" id="home-url" data-url="{% url 'home' %}" />
+<script src="{% static 'js/home.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
+{% endblock %}

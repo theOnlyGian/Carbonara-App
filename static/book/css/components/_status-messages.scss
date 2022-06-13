@@ -1,0 +1,54 @@
+@import 'variables';
+
+.access-status {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    height: 4rem;
+    background-color: rgb(212, 69, 83);
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .7rem;
+    gap: 1rem;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.40);
+    z-index: 1000;
+    padding: .7rem;
+}
+.access-status.success {
+    background-color: rgb(92, 201, 92);
+}
+
+.status-message {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    height: 5rem;
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+    animation: status 1.5s paused;
+    padding: 1rem;
+    opacity: .9;
+    z-index: 100;
+    opacity: .3;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.50);
+}
+
+.status-message.success {
+    background-color: rgb(92, 201, 92);
+}
+
+.status-message.unsuccess {
+    background-color: rgb(212, 69, 83);
+}
+
+.status-message.hide {
+    display: none;
+}

@@ -1,0 +1,87 @@
+@import 'variables';
+
+//HOME ICONS
+.nav li a .fa-home:before {
+    font-size: 2rem;
+    color: $text-color;
+    box-shadow: 1px 1px 205px rgba(0, 0, 0, 0.20);
+}
+
+.nav li a .fa-cutlery:before {
+    font-size: 1.6rem;
+    color: $text-color;
+}
+
+.nav li a .fa-user:before {
+    font-size: 2rem;
+    color: $text-color;
+}
+
+.nav li a .fa-github:before {
+    font-size: 2rem;
+}
+
+.fa-times-circle:before,
+.fa-check-circle:before {
+    content: "\f057";
+    font-size: 2rem;
+}
+
+.fa-times:before {
+    content: "\f00d";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    padding: .6rem;
+}
+
+.fa-search:before {
+    font-size: 1.8rem;
+    color: #5f4268;
+}
+
+
+
+//SCROLL TO TOP ICON
+.scroll-to-top {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: .7rem;
+    background-color: rgb(227, 227, 227);
+    color: #5f4268;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.40);
+    cursor: pointer;
+}
+
+.scroll-to-top.hide {
+    display: none;
+    bottom: -100%;
+}
+
+.fa-arrow-up:before {
+    font-size: 1.5rem;
+}
+
+//ACCESS ICONS
+.access-container .access-form .username-input .fa-user:before {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.access-container .access-form .password-input .fa-lock:before {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(0, -50%)
+}

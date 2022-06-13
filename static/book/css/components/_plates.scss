@@ -1,0 +1,67 @@
+@import 'variables';
+.favourites{
+    width: 100%;
+    min-height: 100vh;
+    background: #875BC1;
+    background: -webkit-linear-gradient(top left, #875BC1, #C36D7A);
+    background: -moz-linear-gradient(top left, #875BC1, #C36D7A);
+    background: linear-gradient(to bottom right, #875BC1, #C36D7A);
+    display: flex;
+    flex-direction: column;
+}
+
+.favourites #ricerca-titolo{
+    margin-top: 111.2px;
+}
+.favourite{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 10rem;
+    background-color: $third-color;
+    border-radius: .7rem;
+    overflow: hidden;
+    padding-right: 1rem;
+    gap: 1rem;
+    animation: hide paused .8s;
+    img{
+        width: 20%;
+    }
+}
+
+.favourite-text{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex: 1;
+}
+
+.dettagli-piatto{
+    justify-self: flex-end;
+    align-self: center;
+    border-radius: .7rem;
+    padding: .5rem;
+    background-color: $fourth-color;
+    color: $text-color;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 3rem;
+    transition: all .5s;
+    font-weight: 400;
+    &:hover{
+     background-color: $secondary-color;
+     cursor: pointer;
+    }
+    justify-self: flex-end;
+}
+
+.favourite .main-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}

@@ -1,0 +1,81 @@
+@keyframes sp10-0 {
+
+    0%,
+    10% {
+        transform: translateY(0) scaleY(1)
+    }
+
+    49.99% {
+        transform: translateY(-100%) scaleY(1)
+    }
+
+    50% {
+        transform: translateY(-100%) scaleY(-1)
+    }
+
+    90%,
+    100% {
+        transform: translateY(-200%) scaleY(-1)
+    }
+}
+
+@keyframes sp10-1 {
+
+    0%,
+    20% {
+        transform: rotate(0deg) translate(0, 0) rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(calc(var(--s, 1)*-90deg)) translate(0, 0) rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(calc(var(--s, 1)*-90deg)) translate(0, -40px) rotate(calc(var(--s, 1)*-90deg))
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes status {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        line-height: 100%;
+    }
+
+    75% {
+        opacity: 0;
+        line-height: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        line-height: 0px;
+    }
+}

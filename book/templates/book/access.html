@@ -1,0 +1,66 @@
+{% extends 'book/layout.html' %}
+{% block body %}
+<div class="access-container">
+    {% if errorMessage %}
+    <div class="access-status">
+        <p>{{errorMessage}}</p>
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </div>
+    {% endif %}
+    {% if successMessage %}
+    <div class="access-status success">
+        <p>{{successMessage}}</p>
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+    </div>
+    {% endif %}
+    <form class="access-form" action="" method="POST">
+        {% csrf_token %}
+        <h1>Carbonara.</h1>
+        {% if login %}
+        <p>Bentornato! Accedi.</p>
+        <div class="username-input">
+            <input name='username' type="text" required>
+            <label for="username">Username</label>
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="password-input">
+            <input name='password' type="password" required>
+            <label for="password">Password</label>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <button>Accedi</button>
+        <div class="informations">
+            <a href="{% url 'register' %}">Registrati</a>
+            <a href="https://twitter.com/theOnlyGian1" target="_blank">Conttatami</a>
+        </div>
+        {% endif %}
+        {% if register %}
+        <p>Sei nuovo? Crea un account.</p>
+        <div class="username-input">
+            <input name='username' type="text" required>
+            <label for="username">Username</label>
+            <i class="fa fa-user" aria-hidden="true"></i>
+
+        </div>
+        <div class="password-input">
+            <input name='password1' type="password" required>
+            <label for="password">Password</label>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+
+        </div>
+        <div class="password-input">
+            <input name='password2' type="password" required>
+            <label for="password">Conferma Password</label>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+
+        </div>
+        <button>Registrati</button>
+        <div class="informations">
+            <a href="{% url 'login' %}">Accedi</a>
+            <a href="https://twitter.com/theOnlyGian1" target="_blank">Conttatami</a>
+
+        </div>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
