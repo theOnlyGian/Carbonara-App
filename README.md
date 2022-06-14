@@ -7,7 +7,7 @@ I created this app to learn about:
 - SCSS
 - Fetch data from an api and a database
 - Favicons
-
+- AJAX
 ## How to run this app locally
 ### Setup
 Make sure to have Python and Django  installed in you computer. Head over to https://www.python.org/downloads/ and https://www.djangoproject.com/download/ for the download guide.
