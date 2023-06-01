@@ -20,4 +20,4 @@ COPY . /app
 EXPOSE 8000
 
 # Run the default command
-CMD ["python", "app.py"]
+CMD ["python", "manage.py"]
