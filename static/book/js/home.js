@@ -192,7 +192,7 @@ function loadBtns() {
 
             popup.classList.remove('hidden')
             overlay.classList.remove('hidden')
-            body.style.overflowY = 'hidden';
+            body.style.overflow = 'hidden';
             section.style.pointerEvents = 'none';
             setTimeout(() => { ingredienti.style.overflowY = 'scroll'; dettagli.style.overflowY = 'auto' }, 1000);
             popup.addEventListener('click', (e) => {
@@ -201,7 +201,7 @@ function loadBtns() {
                 if (button.classList.contains('ingredienti-btn')) {
                     ingredienti.classList.remove('hidden');
                     dettagli.classList.add('hidden');
-                    setTimeout(() => { ingredienti.style.overflowY = 'auto'; }, 0300);
+                    setTimeout(() => { ingredienti.style.overflowY = 'auto'; }, 300);
                 }
                 //When user clicks on 'dettagli' button
                 else if (button.classList.contains('dettagli-btn')) {
@@ -227,7 +227,7 @@ function loadBtns() {
         if (e.target.classList.contains('close-button')) {
             let closeButton = e.target;
             let parent = closeButton.parentElement;
-            body.style.overflowY = 'scroll';
+            body.style.overflow= 'scroll';
             section.style.pointerEvents = 'all';
             overlay.classList.add('hidden')
             parent.classList.add('hidden');
